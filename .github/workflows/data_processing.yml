@@ -3,21 +3,21 @@ name: Run Python Script
 on:
   push:
     branches:
-      - main  # Triggers on pushes to the main branch
-  workflow_dispatch:  # Allows manual triggering of the workflow
+      - main  #triggers on pushes to the main branch
+  workflow_dispatch:  #allows manual triggering of the workflow
 
 jobs:
   run-script:
-    runs-on: ubuntu-latest  # GitHub's default Linux environment
+    runs-on: ubuntu-latest  #gitHub's default Linux environment which is in Ubuntu for this one
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3  # Checks out your repository's code
+        uses: actions/checkout@v4  #checks out your repository's code
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12'  # Use the same Python version as locally
+          python-version: '3.12'  #use the same Python version as locally
 
       - name: Install dependencies
         run: |
@@ -28,7 +28,7 @@ jobs:
         run: python script.py
 
       - name: Upload Report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4 #upload files(artifacts) created duyring workflow
         with:
           name: report
-          path: report.txt  # Uploads report.txt as an artifact
+          path: report.txt  #uploads report.txt as an artifact
