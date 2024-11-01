@@ -28,7 +28,7 @@ jobs:
         run: python script.py
 
       - name: Upload Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: report
           path: report.txt  # Uploads report.txt as an artifact
