@@ -1,0 +1,2 @@
+Average: 30.0
+Max: 50
