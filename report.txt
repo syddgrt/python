@@ -1,2 +1,4 @@
-Average: 30.0
-Max: 50
+Average: 55.0
+Max: 100
+Min: 10
+Std_dev: 30.276503540974915
