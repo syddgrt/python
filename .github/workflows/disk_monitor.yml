@@ -25,11 +25,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install psutil
-
-      - name: Run system metrics script
-        run: python system_metrics.py
-
-      - name: Run disk monitor script
+     - name: Run disk monitor script
         run: python disk_monitor.py
 
   upload_logs:
